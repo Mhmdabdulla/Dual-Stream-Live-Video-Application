@@ -1,1 +1,245 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --navy: #1B2A4A;
+  --blue: #2563EB;
+  --blue-light: #DBEAFE;
+  --teal: #0F6E56;
+  --green: #065F46;
+  --red: #991B1B;
+  --red-light: #FEE2E2;
+  --amber: #92400E;
+  --gray: #374151;
+  --gray-light: #F3F4F6;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--gray-light);
+  color: var(--gray);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 10px 14px;
+  min-height: 44px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 160px;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.btn {
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn--primary {
+  background: var(--blue);
+  color: white;
+}
+
+.btn--danger {
+  background: #DC2626;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.error-box {
+  border-left: 4px solid #DC2626;
+  background: var(--red-light);
+  padding: 12px 16px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.client-info-bar {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--gray);
+  background: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 20px;
+}
+
+.elapsed {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stream-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.stream-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.stream-card__header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.stream-card__video {
+  position: relative;
+}
+
+.video-player {
+  background: #000;
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.video-player video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7280;
+  font-size: 13px;
+}
+
+.disconnect-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge--gray {
+  background: #E5E7EB;
+  color: #374151;
+}
+
+.status-badge--yellow {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.status-badge--green {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.status-badge--red {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.preview-section {
+  margin-top: 16px;
+}
+
+.preview-section .video-player {
+  max-width: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-note {
+  font-size: 13px;
+  color: #6B7280;
+  margin-top: 8px;
+}

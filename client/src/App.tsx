@@ -1,13 +1,16 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import ClientPage from './pages/ClientPage'
+import HostPage from './pages/HostPage'
 
 
-function App() {
-
-
-  return (
-   <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
-}
+const App: React.FC = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Navigate to="/client" replace />} />
+      <Route path="/client" element={<ClientPage />} />
+      <Route path="/host" element={<HostPage />} />
+    </Routes>
+  </BrowserRouter>
+)
 
 export default App
