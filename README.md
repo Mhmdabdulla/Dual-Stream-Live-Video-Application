@@ -21,7 +21,7 @@
 
 <br/>
 
-![DualStream Host Dashboard]([https://placeholder.co/900x500/1B2A4A/FFFFFF?text=Host+Dashboard+Screenshot](https://drive.google.com/file/d/1DxeccepcL7sGUtmND4V3okoTBZL_wmuc/view?usp=sharing))
+![DualStream Host Dashboard](https://docs.google.com/uc?export=download&id=1DxeccepcL7sGUtmND4V3okoTBZL_wmuc)
 
 </div>
 
