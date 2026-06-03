@@ -14,7 +14,6 @@
 [![WebRTC](https://img.shields.io/badge/WebRTC-P2P-333333?style=flat-square&logo=webrtc&logoColor=white)](https://webrtc.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[**Live Demo**](#) · [**Report a Bug**](issues) · [**Request a Feature**](issues)
 
 <br/>
 
@@ -22,7 +21,7 @@
 
 <br/>
 
-![DualStream Host Dashboard](https://placeholder.co/900x500/1B2A4A/FFFFFF?text=Host+Dashboard+Screenshot)
+![DualStream Host Dashboard]([https://placeholder.co/900x500/1B2A4A/FFFFFF?text=Host+Dashboard+Screenshot](https://drive.google.com/file/d/1DxeccepcL7sGUtmND4V3okoTBZL_wmuc/view?usp=sharing))
 
 </div>
 
@@ -50,14 +49,12 @@
 - [Browser Support](#browser-support)
 - [Troubleshooting](#troubleshooting)
 - [Known Limitations](#known-limitations)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
 ## Overview
 
-DualStream is a real-time video surveillance and monitoring tool designed for remote proctoring, live technical assessments, and supervised collaboration sessions. A single client session transmits two independent live video feeds — the participant's face via webcam and their full screen activity — to a centralized host dashboard, all running natively in the browser with no plugins required.
+DualStream is a real-time video surveillance and monitoring tool, live technical assessments, and supervised collaboration sessions. A single client session transmits two independent live video feeds — the participant's face via webcam and their full screen activity — to a centralized host dashboard, all running natively in the browser with no plugins required.
 
 The architecture is built entirely on open web standards: **WebRTC** for peer-to-peer media transmission, **Socket.IO** for lightweight signaling, and the **Canvas API** for real-time timestamp compositing. No third-party streaming CDN is needed.
 
